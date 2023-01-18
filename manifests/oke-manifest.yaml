@@ -47,7 +47,7 @@ spec:
         - name: DB_PSSWD
           value: ${DB_PSSWD}
         - name: DB_NAME
-          value: "todos"
+          value: "todo"
       imagePullSecrets:
         - name: my-ocirsecret
 ---
