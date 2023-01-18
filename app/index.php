@@ -4,6 +4,7 @@
 
 	// connect to database
 	$db = mysqli_connect("10.20.5.81", "admin", "Legacyofkain_7", "todo");
+    //$db = mysqli_connect("129.146.168.249", "admin", "Legacyofkain_7", "todo");
 
 	// insert a quote if submit button is clicked
 	if (isset($_POST['submit']))
@@ -38,8 +39,8 @@
 	<div class="heading">
 		<h2 style="font-style: 'Hervetica';">ToDo List Application PHP and MySQL database</h2>
     </div>
-    <div class="sub-heading">    
-        <h3 style="font-style: 'Hervetica';">
+    <div class="heading">    
+        <h3 style="font-style: 'Hervetica'; margin: 10px">
             <?php
                 echo "Hostname: " . gethostname();
             ?>
@@ -72,7 +73,7 @@
                     <td> <?php echo $row['id']; ?> </td>
                     <td class="task"> <?php echo $row['task']; ?> </td>
                     <td class="delete"> 
-                        <a href="index.php?del_task=<?php echo $row['id'] ?>">x</a> 
+                        <a href="index.php?del_task=<?php echo $row['id'] ?>">-</a> 
                     </td>
                 </tr>
             <?php } ?>	

@@ -1,21 +1,13 @@
 .heading{
 	width: 50%;
-	margin: 30px auto;
+	margin: 30px auto 15px auto;
 	text-align: center;
 	color: 	#6B8E23;
 	background: #FFF8DC;
 	border: 2px solid #6B8E23;
 	border-radius: 20px;
 }
-.sub-heading{
-	width: 50%;
-	margin: 20px auto;
-	text-align: center;
-	color: 	#6B8E23;
-	background: #FFF8DC;
-	border: 2px solid #6B8E23;
-	border-radius: 20px;
-}
+
 form {
 	width: 50%; 
 	margin: 30px auto; 
@@ -78,7 +70,7 @@ tr:hover {
 .delete a{
 	color: white;
 	background: #a52a2a;
-	padding: 1px 6px;
-	border-radius: 3px;
+	padding: 1px 9px 5px 9px;
+	border-radius: 100%;
 	text-decoration: none;
 }
