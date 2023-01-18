@@ -10,7 +10,7 @@
     //$DB_PSSWD = $_ENV["DB_PSSWD"];
 
     // connect to database
-	$db_conn = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['$DB_PSSWD'], $_ENV['$DB_NAME']);
+	$db_conn = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PSSWD'], $_ENV['DB_NAME']);
 
     // insert a quote if submit button is clicked
 	if (isset($_POST['submit']))
