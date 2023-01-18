@@ -37,6 +37,12 @@
 <body>
 	<div class="heading">
 		<h2 style="font-style: 'Hervetica';">ToDo List Application PHP and MySQL database</h2>
+        
+        <h3 style="font-style: 'Hervetica';">
+            <?php
+                echo "<b>Hostname: </b>" . gethostname();
+            ?>
+        </h3>
 	</div>
 	<form method="post" action="index.php" class="input_form">
         <?php if (isset($errors)) { ?>
@@ -49,7 +55,7 @@
     <table>
         <thead>
             <tr>
-                <th>N</th>
+                <th>N°</th>
                 <th>Tasks</th>
                 <th style="width: 60px;">Action</th>
             </tr>
