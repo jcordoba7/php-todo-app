@@ -6,7 +6,8 @@
 	$db = mysqli_connect("129.146.168.249", "admin", "Legacyofkain_7", "todo");
 
 	// insert a quote if submit button is clicked
-	if (isset($_POST['submit'])) {
+	if (isset($_POST['submit']))
+    {
 		if (empty($_POST['task'])) {
 			$errors = "You must fill in the task";
 		}else{
@@ -18,7 +19,8 @@
 	}
 
     // delete task
-    if (isset($_GET['del_task'])) {
+    if (isset($_GET['del_task']))
+    {
         $id = $_GET['del_task'];
 
         mysqli_query($db, "DELETE FROM tasks WHERE id=".$id);
