@@ -1,12 +1,18 @@
 <?php 
     // initialize errors variable
 	$errors = "";
+    //$DB_HOST = "10.20.5.81";
+    //$DB_USER = "admin";
+    //$DB_PSSWD = "Legacyofkain_7";
+    //$DB_NAME = "todo";
 
-	// connect to database
-	$db = mysqli_connect("10.20.5.81", "admin", "Legacyofkain_7", "todo");
-    //$db = mysqli_connect("129.146.168.249", "admin", "Legacyofkain_7", "todo");
+    //$DB_HOST = "129.146.168.249";
+    //$DB_PSSWD = $_ENV["DB_PSSWD"];
 
-	// insert a quote if submit button is clicked
+    // connect to database
+	$db_conn = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['$DB_PSSWD'], $_ENV['$DB_NAME']);
+
+    // insert a quote if submit button is clicked
 	if (isset($_POST['submit']))
     {
 		if (empty($_POST['task'])) {
@@ -14,7 +20,7 @@
 		}else{
 			$task = $_POST['task'];
 			$sql = "INSERT INTO tasks (task) VALUES ('$task')";
-			mysqli_query($db, $sql);
+			mysqli_query($db_conn, $sql);
 			header('location: index.php');
 		}
 	}
@@ -24,7 +30,7 @@
     {
         $id = $_GET['del_task'];
 
-        mysqli_query($db, "DELETE FROM tasks WHERE id=".$id);
+        mysqli_query($db_conn, "DELETE FROM tasks WHERE id=".$id);
         header('location: index.php');
     }
 ?>
@@ -66,7 +72,7 @@
         <tbody>
             <?php 
             // select all tasks if page is visited or refreshed
-            $tasks = mysqli_query($db, "SELECT * FROM tasks");
+            $tasks = mysqli_query($db_conn, "SELECT * FROM tasks");
 
             while ($row = mysqli_fetch_array($tasks)) { ?>
                 <tr>

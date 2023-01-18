@@ -31,6 +31,23 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        env:
+        - name: DB_HOST
+          value: "129.146.168.249"
+        - name: DB_USER
+          value: "admin"
+        - name: DB_PSSWD
+          value: "Legacyofkain_7"
+        - name: DB_NAME
+          value: "todo"
+#        - name: MYSQL_HOST
+#          value: ${DB_HOST}
+#        - name: MYSQL_USER
+#          value: ${DB_USER}
+#        - name: MYSQL_PASSWORD
+#          value: ${DB_PSSWRD}
+#        - name: MYSQL_DB
+#          value: "todos"
       imagePullSecrets:
         - name: my-ocirsecret
 ---
