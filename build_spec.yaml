@@ -11,15 +11,26 @@ env:
   # the value of a vaultVariable is the secret-id (in OCI ID format) stored in the OCI Vault service
   # you can then access the value of that secret in your build_spec.yaml commands
   vaultVariables:
+    
+    # variables related to container image
     OCIR_REGION_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaact4jh4iacnoyyq3nqhhk7fgmki6f77dlxwuncddc5ixgcb3345fq
     OCIR_STORAGE_NAMESPACE_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaact4jh4iae4hgtdyl5orq4vcmcjvoljncvjw25pfnf3mncema5r6a
+
+    # variables related to database connection
+    DB_HOST_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaact4jh4iaqr2urssmpzum7z772npp4twsolt57c7xx7yjf4wuemxa
+    DB_USER_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaact4jh4iamb326xsrl3u3iol4cwqpvrxbs45jmodkveyf5sexq3iq
+    DB_PSSWD_VAULT: ocid1.vaultsecret.oc1.phx.amaaaaaact4jh4iayg5ypxxgbdpv4oge3aef5awnc2tdida76ypachqk2yza
   
   # exportedVariables are made available to use as parameters in sucessor Build Pipeline stages
   # For this Build to run, the Build Pipeline needs to have a BUILDRUN_VERSION parameter set
   exportedVariables:
+
     - BUILDRUN_VERSION
     - OCIR_REGION
     - OCIR_STORAGE_NAMESPACE
+    - DB_HOST
+    - DB_USER
+    - DB_PSSWD
 
 steps:
   - type: Command
@@ -38,6 +49,10 @@ steps:
       echo OCIR_REGION is $OCIR_REGION
       export OCIR_STORAGE_NAMESPACE=$OCIR_STORAGE_NAMESPACE_VAULT
       echo OCIR_STORAGE_NAMESPACE is $OCIR_STORAGE_NAMESPACE
+      echo transferring the Database connection DATA vault variables
+      export DB_HOST=$DB_HOST_VAULT
+      export DB_USER=$DB_USER_VAULT
+      export DB_PSSWD=$DB_PSSWD_VAULT
       echo Image will be stored to ${OCIR_REGION}/${OCIR_STORAGE_NAMESPACE}/${MY_INITIALS}/${APP_MICROSERVICE}:${BUILDRUN_VERSION}
     onFailure:
       - type: Command

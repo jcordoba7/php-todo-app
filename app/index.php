@@ -1,14 +1,7 @@
 <?php 
     // initialize errors variable
 	$errors = "";
-    //$DB_HOST = "10.20.5.81";
-    //$DB_USER = "admin";
-    //$DB_PSSWD = "Legacyofkain_7";
-    //$DB_NAME = "todo";
-
-    //$DB_HOST = "129.146.168.249";
-    //$DB_PSSWD = $_ENV["DB_PSSWD"];
-
+    
     // connect to database
 	$db_conn = mysqli_connect($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PSSWD'], $_ENV['DB_NAME']);
 
