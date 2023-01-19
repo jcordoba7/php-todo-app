@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List Application PHP and MySQL database</h2>
+		<h2 style="font-style: 'Hervetica';">ToDo List Application (NEW RELEASE 2.0)</h2>
     </div>
     <div class="heading">    
         <h3 style="font-style: 'Hervetica'; margin: 10px">
