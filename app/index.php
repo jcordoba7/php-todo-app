@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List Application PHP and MySQL database (Testing 19 ene 23)</h2>
+		<h2 style="font-style: 'Hervetica';">ToDo List Application PHP and MySQL database</h2>
     </div>
     <div class="heading">    
         <h3 style="font-style: 'Hervetica'; margin: 10px">
@@ -64,7 +64,6 @@
 
         <tbody>
             <?php 
-            // select all tasks if page is visited or refreshed
             $tasks = mysqli_query($db_conn, "SELECT * FROM tasks");
 
             while ($row = mysqli_fetch_array($tasks)) { ?>
