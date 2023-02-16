@@ -36,7 +36,7 @@
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List Application (16-feb-23 10:10am)</h2>
+		<h2 style="font-style: 'Hervetica';">ToDo List Application</h2>
     </div>
     <div class="heading">    
         <h3 style="font-style: 'Hervetica'; margin: 10px">
