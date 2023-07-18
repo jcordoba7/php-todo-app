@@ -9,7 +9,7 @@ metadata:
   name: ${microservice_name}
   namespace: ${namespace}
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: ${microservice_name}
