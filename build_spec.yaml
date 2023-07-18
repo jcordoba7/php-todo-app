@@ -49,7 +49,7 @@ steps:
       echo OCIR_REGION is $OCIR_REGION
       export OCIR_STORAGE_NAMESPACE=$OCIR_STORAGE_NAMESPACE_VAULT
       echo OCIR_STORAGE_NAMESPACE is $OCIR_STORAGE_NAMESPACE
-      echo transferring the Database connection DATA vault variables
+      echo transfering the Database connection DATA vault variables
       export DB_HOST=$DB_HOST_VAULT
       export DB_USER=$DB_USER_VAULT
       export DB_PSSWD=$DB_PSSWD_VAULT
@@ -60,14 +60,17 @@ steps:
           echo "Handling Failure"
           echo "Failure successfully handled"
         timeoutInSeconds: 40
-        runAs: root      
+        runAs: root
 
   - type: Command
     timeoutInSeconds: 1200
     name: "Build container image"
     command: |
       cd ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}
+      echo Running docker update - Working in `pwd`
       docker build --pull --rm -t new-image .
+      echo Images are:
+      docker images
 
 outputArtifacts:
   - name: new_container_image
