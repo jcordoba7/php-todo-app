@@ -81,6 +81,6 @@ outputArtifacts:
   - name: deployment_yaml
     type: BINARY
     location: ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}/manifests/oke-manifest.yaml
-  #- name: ingressRules_yaml
-  #  type: BINARY
-  #  location: ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}/manifests/ingress.yaml
+  - name: blue_green_deployment_yaml
+    type: BINARY
+    location: ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}/manifests/oke-manifest-blue-green.yaml
