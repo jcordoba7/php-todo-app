@@ -1,13 +1,3 @@
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: ${namespace_blue}
----
-kind: Namespace
-apiVersion: v1
-metadata:
-  name: ${namespace_green}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
