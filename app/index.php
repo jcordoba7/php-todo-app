@@ -42,6 +42,7 @@
         <h3 style="font-style: 'Hervetica'; margin: 10px">
             <?php
                 echo "Hostname: " . gethostname();
+                echo "</br>"
                 echo "K8s Namespace: " . $_ENV['POD_NAMESPACE'];
             ?>
         </h3>
