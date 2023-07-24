@@ -36,13 +36,13 @@
 </head>
 <body>
 	<div class="heading">
-		<h2 style="font-style: 'Hervetica';">ToDo List Application (23-julio-2023  -  09:45 pm)</h2>
+		<h2 style="font-style: 'Hervetica';">ToDo List Application (24-julio-2023  -  11:50 am)</h2>
     </div>
     <div class="heading">    
         <h3 style="font-style: 'Hervetica'; margin: 10px">
             <?php
                 echo "Hostname: " . gethostname();
-                echo "</br>"
+                echo "</br>";
                 echo "K8s Namespace: " . $_ENV['POD_NAMESPACE'];
             ?>
         </h3>
