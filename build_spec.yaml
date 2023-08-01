@@ -84,3 +84,6 @@ outputArtifacts:
   - name: blue_green_deployment_yaml
     type: BINARY
     location: ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}/manifests/oke-manifest-blue-green.yaml
+  - name: canary_deployment_yaml
+    type: BINARY
+    location: ${OCI_WORKSPACE_DIR}/${BUILD_SOURCE_NAME}/manifests/oke-manifest-canary.yaml
