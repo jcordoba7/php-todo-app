@@ -44,7 +44,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ${microservice_name}-bg-svc
+  name: ${microservice_name}-canary-svc
   annotations: 
     service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
@@ -62,7 +62,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   # name: ${microservice_name}-bg-ing
-  name: php-todo-app-bg-ing
+  name: php-todo-app-canary-ing
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
@@ -71,10 +71,10 @@ spec:
   rules:
   - http:
       paths:
-        - path: /blue-green
+        - path: /canary
           pathType: Prefix
           backend:
             service:
-              name: ${microservice_name}-bg-svc
+              name: ${microservice_name}-canary-svc
               port:
                 number: 80
