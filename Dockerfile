@@ -3,3 +3,4 @@ RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 WORKDIR /var/www/html
 COPY app .
 EXPOSE 80
+LABEL maintainer = "Jonathan Cordoba"
