@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ${microservice_name}
 spec:
-  replicas: 4
+  replicas: 6
   selector:
     matchLabels:
       app: ${microservice_name}
@@ -34,6 +34,10 @@ spec:
           value: ${DB_PSSWD}
         - name: DB_NAME
           value: "todo"
+        - name: POD_NAMESPACE
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.namespace
       imagePullSecrets:
         - name: my-ocirsecret
 ---
