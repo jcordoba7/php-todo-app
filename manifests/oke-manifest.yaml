@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ${microservice_name}
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: ${microservice_name}
