@@ -72,7 +72,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /blue-green
+        - path: /
           pathType: Prefix
           backend:
             service:
