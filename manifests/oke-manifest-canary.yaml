@@ -27,7 +27,8 @@ spec:
             memory: 1000Mi
         env:
         - name: DB_HOST
-          value: ${DB_HOST}
+          #value: ${DB_HOST}
+          value: "mysql-router-phx.demo-oci.tk"
         - name: DB_USER
           value: ${DB_USER}
         - name: DB_PSSWD
