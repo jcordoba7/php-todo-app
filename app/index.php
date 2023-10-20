@@ -32,7 +32,7 @@
 <html>
 <head>
 	<title>ToDo List Application PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="style-blue.css">
+    <link rel="stylesheet" type="text/css" href="style-red.css">
 </head>
 <body>
 	<div class="heading">
