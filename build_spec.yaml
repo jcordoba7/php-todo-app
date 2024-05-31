@@ -13,7 +13,7 @@ env:
   vaultVariables:
     
     # variables related to container image
-    OCIR_REGION_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7ialvhitguuokxboi5td5vdhjuxigmbipztgsl7ayd32zaa
+    OCIR_REGION_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7iayfq4vjzrdgtjthrk7tuivosjlgaxzq6cvqlwtmse7hoa
     OCIR_STORAGE_NAMESPACE_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7iauwtyjcdfopnmrwf3p7eamnwpcmlqwrnxox6ctx77tryq
 
     # variables related to database connection
