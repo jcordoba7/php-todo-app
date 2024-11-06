@@ -19,7 +19,7 @@ env:
     # variables related to database connection
     DB_HOST_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7iaeh3o6ug3hpxm5x5aaxx2jhfu5nxz7lh5zyix5oexqpba
     DB_USER_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7ia7d4jxdu52lahry64ysuggvrbeovmptro3qzxaouzca3a
-    DB_PSSWD_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7iak7j2u532ni4av2tz5g4f6nuqvbwod4xfxahbdcnugo6q
+    DB_PSSWD_VAULT: ocid1.vaultsecret.oc1.iad.amaaaaaafioir7iaxscsgydzqi2a7sq5fjdb7wpg2rrsu2kmjmxsg6lx6htq
   
   # exportedVariables are made available to use as parameters in sucessor Build Pipeline stages
   # For this Build to run, the Build Pipeline needs to have a BUILDRUN_VERSION parameter set
