@@ -27,8 +27,8 @@ spec:
             memory: 1000Mi
         env:
         - name: DB_HOST
-          #value: ${DB_HOST}
-          value: "mysql-router-phx.democloud.com.co"
+          value: ${DB_HOST}
+          #value: "mysql-router-phx.democloud.com.co"
         - name: DB_USER
           value: ${DB_USER}
         - name: DB_PSSWD
@@ -50,7 +50,7 @@ metadata:
     service.beta.kubernetes.io/oci-load-balancer-shape: "flexible"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: "10"
     service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: "10"
-    service.beta.kubernetes.io/oci-load-balancer-backend-protocol: "HTTP" #This line is required to integrate with WAF service
+    # service.beta.kubernetes.io/oci-load-balancer-backend-protocol: "HTTP" #This line is required to integrate with WAF service
 spec:
   type: ClusterIP
   ports:
